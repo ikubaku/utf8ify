@@ -1,0 +1,33 @@
+= utf8ify
+
+Convert text file encoding to UTF-8.
+
+== Prerequisites:
+* python
+* (Optional) python-chardet
+
+== Basic usage
+[source]
+----
+$ utf8ify.py -o coverted.txt input.txt
+----
+
+or else:
+
+[source]
+----
+$ utf8ify.py - < input.txt > converted.txt
+----
+
+Convert without chardet package:
+
+[source]
+----
+$ utf8ify.py --nochardet -e euc-jp input.txt > converted.txt
+----
+
+== Tips
+If the input encoding does not be determined by the chardet package, the encoding specified with `--encoding` option will be used to convert the input, which will come in handy when you want to convert a lot of text files.
+
+== License
+This program is licensed under The MIT License. See link:LICENSE[] for the full text of the license.
